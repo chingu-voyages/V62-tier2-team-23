@@ -1,0 +1,17 @@
+{
+  "name": "path-pilot",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.3.0"
+  },
+  "optionalDependencies": {
+    "@rolldown/binding-darwin-x64": "^1.2.8"
+  }
+}
