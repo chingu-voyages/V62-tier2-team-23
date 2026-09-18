@@ -157,6 +157,13 @@ p[data-width="wide"] {
   max-width: 42ch;
 }
 
+.footerContainer {
+  display: flex;
+  flex-direction: row; /* Stack images horizontally */
+  justify-content: space-evenly; /* Even space between and around images */
+  align-items: center; /* Horizontally center the images */
+}
+
 /* button */
 
 .button {
