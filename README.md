@@ -36,7 +36,7 @@ your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
 - Jose' Bonilla: [GitHub](https://github.com/jy-bonilla) / [LinkedIn](https://linkedin.com/in/bonillacodes)
-- Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Mustaqeem Chowdhury: [GitHub](https://github.com/mustaqeem2001) / [LinkedIn](https://linkedin.com/in/mustaqeem-c-3a3875208)
 
   ...
 
