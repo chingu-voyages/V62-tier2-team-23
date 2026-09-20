@@ -1,16 +1,43 @@
-# React + Vite
+# voyage-tasks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Built with
 
-Currently, two official plugins are available:
+Semantic HTML5 markup
+CSS custom properties
+Flexbox
+Mobile-first workflow
+Styled Components - For styles
+vanilla javascript
+quick backbone install using vite v8.3.0
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Command to run a hot development
 
-## React Compiler
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Team Documents
 
-## Expanding the ESLint configuration
+You may find these helpful as you work together to organize your project.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Team Project Ideas](./docs/team_project_ideas.md)
+- [Team Decision Log](./docs/team_decision_log.md)
+
+Meeting Agenda templates (located in the `/docs` directory in this repo):
+
+- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
+- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
+- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
+- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+
+## Our Team
+
+Everyone on your team should add their name along with a link to their GitHub
+& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
+your repo access and to practice PR'ing with your team _before_ you start
+coding!
+
+- Jose' Bonilla: [GitHub](https://github.com/jy-bonilla) / [LinkedIn](https://linkedin.com/in/bonillacodes)
+- Mustaqeem Chowdhury: [GitHub](https://github.com/mustaqeem-2001) / [LinkedIn](https://linkedin.com/in/mustaqeem-c-3a3875208)
+
+  ...
+
+- Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
