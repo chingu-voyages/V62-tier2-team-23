@@ -13,5 +13,10 @@
   },
   "optionalDependencies": {
     "@rolldown/binding-darwin-x64": "^1.2.8"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4"
   }
 }
