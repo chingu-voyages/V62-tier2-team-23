@@ -41,17 +41,17 @@ export default function Header() {
               role="list"
               className="nav-list"
             >
-              <button className="button | display-sm-none display-md-inline-flex">
-                <Link to="/">Home</Link>
-              </button>
+              <Link to="/" className="button | display-sm-none display-md-inline-flex">
+                Home
+              </Link>
             </ul>
           </nav>
-          <button className="button | display-sm-none display-md-inline-flex">
+          <Link to="/login" className="button | display-sm-none display-md-inline-flex">
             Login
-          </button>
-          <button className="button | display-sm-none display-md-inline-flex">
+          </Link>
+          <Link to="/signup" className="button | display-sm-none display-md-inline-flex">
             Sign up
-          </button>
+          </Link>
         </div>
       </div>
     </header>
