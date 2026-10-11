@@ -1,3 +1,4 @@
+
 // import { useState } from "react";
 // import { validateLearningPathInput } from "./inputValidation";
 // import { generateLearningPath } from "../services/geminiService";
@@ -243,11 +244,16 @@
 //         </main>
 //     );
 // }
+
+
+
 import { useState } from "react";
 import { validateLearningPathInput } from "./inputValidation";
 import { generateLearningPath } from "../services/geminiService";
+import { useNavigate } from "react-router-dom";
 
 export default function InputForm() {
+    const navigate = useNavigate();
     const [careerGoal, setCareerGoal] = useState("");
     const [SkillLevel, setSkillLevel] = useState("");
 
@@ -261,6 +267,9 @@ export default function InputForm() {
     const [skillError, setSkillError] = useState("");
     const [studyTimeError, setStudyTimeError] = useState("");
     const [timeframeError, setTimeframeError] = useState("");
+
+    const [isLoading, setIsLoading] = useState(false);
+    const [submitError, setSubmitError] = useState("");
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -288,13 +297,21 @@ export default function InputForm() {
 
         console.log("Form is valid!", result.userData);
 
-        // Send the validated data to Gemini
+        // Sends data to Gemini
+        setSubmitError("");
+        setIsLoading(true);
         try {
-            const learningPath = await generateLearningPath(result.userData);
-
-            console.log("Generated learning path:", learningPath);
+            const steps = await generateLearningPath(result.userData);
+            navigate("/results", {
+                state: { steps, userData: result.userData },
+            });
         } catch (error) {
             console.error("Failed to generate learning path:", error);
+            setSubmitError(
+                "We couldn't generate your learning path right now. Please try again in a moment."
+            );
+        } finally {
+            setIsLoading(false);
         }
     }
 
@@ -508,11 +525,18 @@ export default function InputForm() {
                             )}
                         </div>
 
+                       {submitError && (
+                            <div className="alert alert-danger" role="alert">
+                                {submitError}
+                            </div>
+                        )}
+
                         <button
                             type="submit"
                             className="btn btn-info text-white w-100 fw-semibold py-2"
+                            disabled={isLoading}
                         >
-                            Generate My Learning Path
+                            {isLoading ? "Generating your path..." : "Generate My Learning Path"}
                         </button>
 
                     </form>

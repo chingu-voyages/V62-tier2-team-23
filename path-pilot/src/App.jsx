@@ -5,6 +5,7 @@ import Footer from "./components/Footer.jsx";
 import InputForm from "./pages/InputForm.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import Login from "./pages/Login.jsx";
+import ResultsPage from "./pages/ResultsPage.jsx";
 
 export default function App() {
 
@@ -16,6 +17,7 @@ export default function App() {
                 <Route path="/inputForm" element={<InputForm />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/results" element={<ResultsPage />} />
             </Routes>
             <Footer />
         </BrowserRouter>
