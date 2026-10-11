@@ -44,7 +44,7 @@ export default function SignUp() {
             return;
         }
 
-        // Valid. Send to your backend here once it exists.
+        // Valid. Send to backend if we end up using it
         console.log("Sign up is valid!", { username: name });
     }
 
