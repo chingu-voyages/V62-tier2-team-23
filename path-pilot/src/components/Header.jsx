@@ -8,7 +8,7 @@ export default function Header() {
           <Link to="/">
             <img
               className="site-logo"
-              src="src/images/logo.png"
+              src="/images/logo.png"
               alt="logo"
             />
           </Link>

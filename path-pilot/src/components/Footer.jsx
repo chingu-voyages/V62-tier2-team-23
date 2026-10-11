@@ -7,7 +7,7 @@ export default function Footer() {
                 <Link to="/">
                     <img
                         className="footer-logo"
-                        src="src/images/logo.png"
+                        src="/images/logo.png"
                         alt="pathPilot logo"
                     />
                 </Link>

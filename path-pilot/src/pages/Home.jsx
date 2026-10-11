@@ -30,7 +30,7 @@ export default function Home() {
                     </div>
                     <div>
                         <img
-                            src="/src/images/groupPhoto.png"
+                            src="/images/groupPhoto.png"
                             alt="groupPhoto"
                         />
                     </div>
@@ -45,19 +45,19 @@ export default function Home() {
             
                 {/* Slides */}
                 <div className="carousel-slide">
-                    <img src="src/images/yourGoal.png" alt="your goal" />
+                    <img src="/images/yourGoal.png" alt="your goal" />
                 </div>
                 
                 <div className="carousel-slide">
-                    <img src="src/images/yourSkill.png" alt="your skill" />
+                    <img src="/images/yourSkill.png" alt="your skill" />
                 </div>
                 
                 <div className="carousel-slide">
-                    <img src="src/images/aiGuidance.png" alt="ai ai guidance" />
+                    <img src="/images/aiGuidance.png" alt="ai ai guidance" />
                 </div>
 
                 <div className="carousel-slide">
-                    <img src="src/images/yourPath.png" alt="your path" />
+                    <img src="/images/yourPath.png" alt="your path" />
                 </div>
             </div>
         </section>
