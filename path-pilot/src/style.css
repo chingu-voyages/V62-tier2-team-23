@@ -540,3 +540,67 @@ p[data-width="wide"] {
     display: inline-flex;
   }
 }
+
+
+
+/* Sign up page */
+
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 70vh;
+  padding: var(--size-600) var(--size-400);
+  background-color: #e8f3ff;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 28rem;
+  padding: var(--size-500);
+  background-color: var(--clr-neutral-100);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1rem rgb(0 0 0 / 0.08);
+}
+
+.auth-title {
+  font-size: var(--fs-700);
+  line-height: 1.2;
+}
+
+.auth-subtitle {
+  max-width: none;
+}
+
+.auth-input:focus {
+  border-color: var(--clr-accent-400);
+  box-shadow: 0 0 0 0.2rem hsl(181 47% 51% / 0.25);
+}
+
+.auth-submit {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: var(--size-500);
+}
+
+.auth-footer-text {
+  max-width: none;
+  text-align: center;
+}
+
+.auth-footer-text a {
+  color: var(--clr-accent-400);
+  font-weight: var(--fw-semi-bold);
+}
+
+@media (min-width: 50em) {
+  .auth-page {
+    align-items: center;
+    padding-block: var(--size-800);
+  }
+
+  .auth-card {
+    padding: var(--size-600);
+  }
+}
