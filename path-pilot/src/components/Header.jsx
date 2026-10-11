@@ -7,10 +7,12 @@ export default function Header() {
         <div className="nav-wrapper">
           <Link to="/">
             <img
+              className="site-logo"
               src="src/images/logo.png"
               alt="logo"
             />
           </Link>
+
           <button
             className="mobile-nav-toggle"
             aria-controls="primary-navigation"
@@ -32,26 +34,32 @@ export default function Header() {
               Menu
             </span>
           </button>
-          <nav
-            className="primary-navigation"
-            id="primary-navigation"
-          >
-            <ul
-              aria-label="Primary"
-              role="list"
-              className="nav-list"
+
+          <div className="nav-actions">
+            <nav
+              className="primary-navigation"
+              id="primary-navigation"
             >
-              <Link to="/" className="button | display-sm-none display-md-inline-flex">
-                Home
-              </Link>
-            </ul>
-          </nav>
-          <Link to="/login" className="button | display-sm-none display-md-inline-flex">
-            Login
-          </Link>
-          <Link to="/signup" className="button | display-sm-none display-md-inline-flex">
-            Sign up
-          </Link>
+              <ul
+                aria-label="Primary"
+                role="list"
+                className="nav-list"
+              >
+                <li>
+                  <Link to="/" className="button | display-sm-none display-md-inline-flex">
+                    Home
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+
+            <Link to="/login" className="button | display-sm-none display-md-inline-flex">
+              Login
+            </Link>
+            <Link to="/signup" className="button | display-sm-none display-md-inline-flex">
+              Sign up
+            </Link>
+          </div>
         </div>
       </div>
     </header>

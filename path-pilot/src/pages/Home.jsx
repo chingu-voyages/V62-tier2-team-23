@@ -38,12 +38,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="carousel | padding-block-700">
-            <h2
-            className="fs-secondary-heading fw-bold"
-            >
-            Your Learning Path
-            </h2>
+        <section className="carousel">
             
             {/* Carousel here */}
             <div className="carousel-container">

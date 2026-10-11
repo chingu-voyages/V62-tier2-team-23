@@ -108,14 +108,18 @@ svg {
 /*carousel css*/
 .carousel-container {
   display: flex;
-  flex-direction: row; /* Stack images horizontally */
-  justify-content: space-evenly; /* Even space between and around images */
-  align-items: center; /* Horizontally center the images */
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+  background-color: #fff;
+}
 
-  height: 100vh; /* Set a height so there is space to distribute */
-  background-color: #f0f0f0; /* Optional: background to see layout */
+
+.carousel {
+  padding-top: var(--size-500);
+  padding-bottom: 6rem;
 }
 
 .image-container img {
@@ -208,7 +212,22 @@ p[data-width="wide"] {
 /* navigation */
 
 .primary-header {
-  padding-top: var(--size-700);
+  padding-block: var(--size-300);
+}
+
+.site-logo {
+  height: 2.5rem;
+  width: auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--size-400);
+}
+
+.primary-header .button {
+  padding: 0.75em 1.5em;
 }
 
 .nav-wrapper {
@@ -223,6 +242,11 @@ p[data-width="wide"] {
 
 .nav-list {
   font-size: var(--fs-nav);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
 }
 
 .nav-list {
@@ -245,13 +269,28 @@ p[data-width="wide"] {
   color: var(--clr-accent-400);
 }
 
+.nav-list a.button,
+.nav-list a.button:hover,
+.nav-list a.button:focus-visible {
+  color: var(--clr-neutral-100);
+}
+
+@media (min-width: 50em) {
+  .primary-navigation,
+  .nav-list,
+  .nav-list li {
+    display: flex;
+    align-items: center;
+  }
+}
+
 @media (max-width: 50em) {
   .primary-navigation {
     display: none;
 
     position: fixed;
     padding: var(--size-700);
-    inset: 7rem var(--size-400) auto;
+    inset: 4.5rem var(--size-400) auto;
     max-width: 25rem;
     margin-left: auto;
     background: var(--clr-neutral-100);
@@ -285,7 +324,7 @@ p[data-width="wide"] {
   .mobile-nav-toggle {
     display: block;
     position: fixed;
-    top: var(--size-600);
+    top: var(--size-300);
     right: var(--size-400);
     cursor: pointer;
     background: transparent;
@@ -353,6 +392,35 @@ p[data-width="wide"] {
 .even-columns {
   display: grid;
   gap: 1rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-400);
+}
+
+.footer-logo {
+  height: 3rem;
+  width: auto;
+}
+
+.footer-divider {
+  width: 2px;
+  height: 1.75rem;
+  background-color: var(--clr-neutral-100);
+  opacity: 0.6;
+}
+
+.footer-link {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: var(--clr-accent-400);
 }
 
 @media (min-width: 50em) {
