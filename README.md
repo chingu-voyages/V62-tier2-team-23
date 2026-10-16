@@ -37,4 +37,4 @@ coding!
 
 - Jose' Bonilla: [GitHub](https://github.com/jy-bonilla) / [LinkedIn](https://linkedin.com/in/bonillacodes)
 - Mustaqeem Chowdhury: [GitHub](https://github.com/mustaqeem-2001) / [LinkedIn](https://linkedin.com/in/mustaqeemchowdhury)
-- weam na jarbou: [GitHub](https://github.com/weamnaj)) /  [LinkedIn](www.linkedin.com/in/weam-jarbou)
+- weam na jarbou: [GitHub](https://github.com/weamnaj)) /  [LinkedIn](https://linkedin.com/in/weam-jarbou)
