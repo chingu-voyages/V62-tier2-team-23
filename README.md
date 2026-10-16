@@ -37,7 +37,4 @@ coding!
 
 - Jose' Bonilla: [GitHub](https://github.com/jy-bonilla) / [LinkedIn](https://linkedin.com/in/bonillacodes)
 - Mustaqeem Chowdhury: [GitHub](https://github.com/mustaqeem-2001) / [LinkedIn](https://linkedin.com/in/mustaqeemchowdhury)
-
-  ...
-
-- Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- weam na jarbou: [GitHub](https://github.com/weamnaj)) /  [LinkedIn](https://linkedin.com/in/weam-jarbou)
