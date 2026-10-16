@@ -1,13 +1,8 @@
 import { GoogleGenAI } from "@google/genai";
 
-const MODELS = ["gemini-3.8-flash", "gemini-3.6-flash"];
-const RETRIES_PER_MODEL = 3;
-
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-function isBusyError(error) {
-    return error?.status === 503 || error?.status === 429 || /503|UNAVAILABLE|429/.test(error?.message ?? "");
-}
+// Fastest first. If one is slow or fails, the next one is tried.
+const MODELS = ["gemini-3.6-flash", "gemini-3.5-flash-lite", "gemini-3.8-flash"];
+const TIMEOUT_MS = 20000;
 
 export default async function handler(req, res) {
     if (req.method !== "POST") {
@@ -29,34 +24,34 @@ export default async function handler(req, res) {
     let lastError;
 
     for (const model of MODELS) {
-        for (let attempt = 1; attempt <= RETRIES_PER_MODEL; attempt++) {
-            try {
-                const response = await ai.models.generateContent({
-                    model,
-                    contents: prompt,
-                    config: { responseMimeType: "application/json" },
-                });
+        try {
+            const started = Date.now();
 
-                const parsed = JSON.parse(response.text);
+            const response = await ai.models.generateContent({
+                model,
+                contents: prompt,
+                config: {
+                    responseMimeType: "application/json",
+                    thinkingConfig: { thinkingLevel: "low" },
+                    httpOptions: { timeout: TIMEOUT_MS },
+                },
+            });
 
-                const steps = parsed.steps.map((step, index) => ({
-                    id: index + 1,
-                    title: step.title,
-                    status: index === 0 ? "in-progress" : "not-started",
-                }));
+            console.log(`${model} answered in ${Date.now() - started}ms`);
 
-                return res.status(200).json({ steps });
-            } catch (error) {
-                lastError = error;
+            const parsed = JSON.parse(response.text);
 
-                if (!isBusyError(error)) {
-                    break;
-                }
+            const steps = parsed.steps.map((step, index) => ({
+                id: index + 1,
+                title: step.title,
+                status: index === 0 ? "in-progress" : "not-started",
+            }));
 
-                if (attempt < RETRIES_PER_MODEL) {
-                    await wait(1000 * 2 ** (attempt - 1));
-                }
-            }
+            return res.status(200).json({ steps });
+        } catch (error) {
+            lastError = error;
+            console.warn(`${model} failed:`, error?.status || error?.message);
+            // Any failure (timeout, busy, bad JSON) moves on to the next model
         }
     }
 
