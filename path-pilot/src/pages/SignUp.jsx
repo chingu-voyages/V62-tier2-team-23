@@ -45,9 +45,8 @@ export default function SignUp() {
             return;
         }
 
-        
-        console.log("Sign up is valid!", { username: name });
         // localStorage stuff here Weaaaaaaaaaaam
+        console.log("Sign up is valid!", { username: name });
         navigate("/"); 
     }
 
