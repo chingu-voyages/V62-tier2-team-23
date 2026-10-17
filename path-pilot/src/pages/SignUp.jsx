@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 export default function SignUp() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
-
+    const navigate = useNavigate();
     const [errors, setErrors] = useState({
         username: "",
         password: "",
@@ -44,8 +45,10 @@ export default function SignUp() {
             return;
         }
 
-        // Valid. Send to backend if we end up using it
+        
         console.log("Sign up is valid!", { username: name });
+        // localStorage stuff here Weaaaaaaaaaaam
+        navigate("/"); 
     }
 
     return (
