@@ -33,8 +33,8 @@ export default function Login() {
             return;
         }
 
-        console.log("Login is valid!", { username: name });
         // LocalStorage here WEAAaaaaaaaaaaaaaaM
+        console.log("Login is valid!", { username: name });
         navigate("/");
     }
 
