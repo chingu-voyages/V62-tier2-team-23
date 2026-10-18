@@ -38,3 +38,4 @@ coding!
 - Jose' Bonilla: [GitHub](https://github.com/jy-bonilla) / [LinkedIn](https://linkedin.com/in/bonillacodes)
 - Mustaqeem Chowdhury: [GitHub](https://github.com/mustaqeem-2001) / [LinkedIn](https://linkedin.com/in/mustaqeemchowdhury)
 - weam na jarbou: [GitHub](https://github.com/weamnaj)) /  [LinkedIn](https://linkedin.com/in/weam-jarbou)
+- Aduroja Ayomide: [GitHub] (https://github.com/AyoRoja)  [LinkedIn] (www.linkedin.com/in/ayomide-victory-aduroja-1733a318a)
